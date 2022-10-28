@@ -1,4 +1,4 @@
-import { Center, Flex } from '@chakra-ui/react'
+import { Box, Center, Container, Flex } from '@chakra-ui/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Footer } from '../components/Footer'
@@ -10,14 +10,12 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <>
-      <Flex>
+      <Flex minHeight={'100vh'} flexDirection={'column'} background={'black'}>
         <Header />
-      </Flex>
-      <Section1 />
-      <Center>
+        <Section1 />
         <Section2 />
-      </Center>
-      <Footer />
+        <Footer />
+      </Flex>
     </>
   )
 }
