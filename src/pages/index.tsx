@@ -13,9 +13,10 @@ export default function Home() {
       <Flex>
         <Header />
       </Flex>
-
       <Section1 />
-      <Section2 />
+      <Center>
+        <Section2 />
+      </Center>
       <Footer />
     </>
   )
