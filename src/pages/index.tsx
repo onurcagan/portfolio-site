@@ -10,7 +10,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <>
-      <Flex minHeight={'100vh'} flexDirection={'column'} background={'black'}>
+      <Flex minHeight={'100vh'} flexDirection={'column'} background={'black'} overflowX={'auto'}>
         <Header />
         <Section1 />
         <Section2 />
