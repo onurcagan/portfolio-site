@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { ScrollToTop } from '../components/ScrollToTop'
 import { Section1 } from '../components/Section1'
-import { Section2 } from '../components/Section2'
+import { ContactMe } from '../components/ContactMe'
 
 export default function Home() {
   return (
@@ -17,8 +17,8 @@ export default function Home() {
         <div id="section1">
           <Section1 />
         </div>
-        <div id="section2">
-          <Section2 />
+        <div id="contactme">
+          <ContactMe />
         </div>
         <Footer />
         <ScrollToTop />

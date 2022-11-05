@@ -19,7 +19,7 @@ export const Header = () => {
             Projects
           </Button>
         </Link>
-        <Link href="#section2">
+        <Link href="#contactme">
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Contact Me
           </Button>
@@ -71,7 +71,7 @@ export const Header = () => {
                 Projects
               </Button>
             </Link>
-            <Link href="#section2">
+            <Link href="#contactme">
               <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
                 Contact Me
               </Button>

@@ -23,7 +23,7 @@ export const Section1 = () => {
     <>
       <Center height={'100vh'} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem">
         <Flex className="embla" overflow="hidden" maxHeight="100%" rounded="3xl" position="relative">
-          <Flex className="embla__viewport" ref={emblaRef}>
+          <Flex className="embla__viewport" rounded={'3xl'} ref={emblaRef}>
             <Flex className="embla__container" h={['100vh', '80vh', '70vh', '70vh']} w={['100vw', '80vw', '70vw', '70vw']}>
               <Image
                 fontSize="3xl"
@@ -32,6 +32,7 @@ export const Section1 = () => {
                 alt="first image"
                 src="/images/first.jpg"
                 rounded="3xl"
+                w="100%"
               />
               <Image
                 fontSize="3xl"
@@ -53,7 +54,7 @@ export const Section1 = () => {
           </Flex>
           <IconButton
             variant="unstyled"
-            icon={<ArrowLeftIcon color="purple" alignSelf={'center'} verticalAlign="center" />}
+            icon={<ArrowLeftIcon color="gray.300" alignSelf={'center'} verticalAlign="center" />}
             aria-label="previous button"
             size="lg"
             fontSize="4xl"
@@ -65,7 +66,7 @@ export const Section1 = () => {
           />
           <IconButton
             variant="unstyled"
-            icon={<ArrowRightIcon color="purple" alignSelf={'center'} verticalAlign="center" />}
+            icon={<ArrowRightIcon color="gray.300" alignSelf={'center'} verticalAlign="center" />}
             aria-label="next button"
             size="lg"
             fontSize="4xl"
