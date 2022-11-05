@@ -12,7 +12,7 @@ export const About = () => {
                   Hi.
                 </Text>
                 <Text as="em" fontSize={'7xl'} color="gray.50" size="lg" zIndex="4">
-                  I'm <strong>Onur.</strong>
+                  I&apos;m <strong>Onur.</strong>
                 </Text>
                 <Text as="i" fontSize={'7xl'} color="gray.50" size="lg" zIndex="4">
                   A Web Developer.
