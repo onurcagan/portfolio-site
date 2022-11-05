@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Flex, Icon, IconButton, Spacer } from '@chakra-ui/react'
+import { Box, Button, Center, Flex, IconButton } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { useState } from 'react'
 import Link from 'next/link'
@@ -7,27 +7,33 @@ export const Header = () => {
   const [display, setDisplay] = useState('none')
 
   return (
-    <Box bg={'blackAlpha.100'} height={'12vh'}>
-      <Flex mb={'1rem'} ml={'2rem'} mr={'2rem'} mt={'1rem'}>
-        <Avatar h={['4rem', '6rem', '8rem', null]} w={'auto'} src="/images/coolicon.jpg" />
-        <Spacer />
-        <Flex mb={'1.3rem'} alignItems={'center'} gap={'0.2rem'} display={['none', 'flex', 'flex', 'flex']}>
-          <Button colorScheme={'red'} color={'gray.400'} variant={'ghost'}>
+    <Box bg={'blackAlpha.100'} maxHeight={'12vh'} height="12vh" display={'flex'} verticalAlign={'center'}>
+      <Flex maxHeight={'100%'} mr="3rem" gap={'3rem'} display={['none', 'flex', 'flex', 'flex']} ml="auto" alignItems={'center'}>
+        <Link href="#about">
+          <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Home
           </Button>
-          <Button colorScheme={'red'} color={'gray.400'} variant={'ghost'}>
+        </Link>
+        <Link href="#section1">
+          <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Projects
           </Button>
-          <Button colorScheme={'red'} color={'gray.400'} variant={'ghost'}>
+        </Link>
+        <Link href="#section2">
+          <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Contact Me
           </Button>
-        </Flex>
+        </Link>
+      </Flex>
+
+      <Flex mb={'1rem'} ml={'auto'} mr={'2rem'} mt={'1rem'} display={['flex', 'none', 'none', 'none']}>
         <IconButton
           display={['flex', 'none', 'none', 'none']}
           size={'md'}
           aria-label="Open Menu"
           alignSelf={'center'}
           icon={<HamburgerIcon />}
+          colorScheme="purple"
           onClick={() => setDisplay('flex')}
         />
         <Flex
@@ -54,16 +60,22 @@ export const Header = () => {
             icon={<CloseIcon />}
             onClick={() => setDisplay('none')}
           />
-          <Flex flexDir="column" pr="2rem" pl="2rem" gap={'3rem'}>
-            <Button colorScheme="purple" size={'lg'}>
-              Home
-            </Button>
-            <Button colorScheme="purple" size={'lg'}>
-              Projects
-            </Button>
-            <Button colorScheme="purple" size={'lg'}>
-              Contact Me
-            </Button>
+          <Flex flexDir="column" pr="2rem" pl="2rem" gap={'3rem'} alignItems="center">
+            <Link href="#about">
+              <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
+                Home
+              </Button>
+            </Link>
+            <Link href="#section1">
+              <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
+                Projects
+              </Button>
+            </Link>
+            <Link href="#section2">
+              <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
+                Contact Me
+              </Button>
+            </Link>
           </Flex>
         </Flex>
       </Flex>

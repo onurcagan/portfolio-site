@@ -1,21 +1,81 @@
-import { Box, Center, Container, Flex, Image, Text } from '@chakra-ui/react'
+import { IconButton, Button, Center, Container, Flex, Image, Text } from '@chakra-ui/react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { useCallback } from 'react'
+import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 
 export const Section1 = () => {
-  const autoplay = Autoplay({ delay: 1000, stopOnInteraction: false, stopOnMouseEnter: true })
-  const [emblaRef] = useEmblaCarousel({ loop: false, align: 'center' }, [autoplay])
-  const emblaSlideStyles = { flex: '0 0 auto' }
+  const autoplay = Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' }, [autoplay])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  const scrollTo = useCallback((index: any) => emblaApi && emblaApi.scrollTo(index), [emblaApi])
+
+  const emblaSlideStyles = { flex: '0 0 100%', maxWidth: '100%', marginRight: '20px', marginLeft: '20px' }
   return (
     <>
-      <Center bg={'red.800'} height={'88vh'} alignItems={'center'}>
-        <div className="embla" ref={emblaRef} style={{ overflow: 'hidden' }}>
-          <Flex className="embla__container" style={{ gap: '50vw', height: '75vh' }}>
-            <Image fontSize="3xl" className="embla__slide" style={emblaSlideStyles} alt="first image" src="/images/first.jpg" />
-            <Image fontSize="3xl" className="embla__slide" style={emblaSlideStyles} alt="second image" src="/images/second.jpg" />
-            <Image fontSize="3xl" className="embla__slide" style={emblaSlideStyles} alt="third image" src="/images/third.jfif" />
+      <Center height={'100vh'} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem">
+        <Flex className="embla" overflow="hidden" maxHeight="100%" rounded="3xl" position="relative">
+          <Flex className="embla__viewport" ref={emblaRef}>
+            <Flex className="embla__container" h={['100vh', '80vh', '70vh', '70vh']} w={['100vw', '80vw', '70vw', '70vw']}>
+              <Image
+                fontSize="3xl"
+                className="embla__slide"
+                style={emblaSlideStyles}
+                alt="first image"
+                src="/images/first.jpg"
+                rounded="3xl"
+              />
+              <Image
+                fontSize="3xl"
+                className="embla__slide"
+                style={emblaSlideStyles}
+                alt="second image"
+                src="/images/second.jpg"
+                rounded="3xl"
+              />
+              <Image
+                fontSize="3xl"
+                className="embla__slide"
+                style={emblaSlideStyles}
+                alt="third image"
+                src="/images/third.jfif"
+                rounded="3xl"
+              />
+            </Flex>
           </Flex>
-        </div>
+          <IconButton
+            variant="unstyled"
+            icon={<ArrowLeftIcon color="purple" alignSelf={'center'} verticalAlign="center" />}
+            aria-label="previous button"
+            size="lg"
+            fontSize="4xl"
+            className="embla__prev"
+            onClick={scrollPrev}
+            position="absolute"
+            alignSelf="center"
+            left="2"
+          />
+          <IconButton
+            variant="unstyled"
+            icon={<ArrowRightIcon color="purple" alignSelf={'center'} verticalAlign="center" />}
+            aria-label="next button"
+            size="lg"
+            fontSize="4xl"
+            className="embla__next"
+            onClick={scrollNext}
+            position="absolute"
+            alignSelf="center"
+            right="2"
+          />
+        </Flex>
       </Center>
     </>
   )

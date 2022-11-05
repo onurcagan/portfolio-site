@@ -2,19 +2,16 @@ import { Box, Center, Flex, Text } from '@chakra-ui/react'
 
 export const Section2 = () => {
   return (
-    <Center bg={'cyan.800'} height={'100vh'}>
-      <Flex flexDirection={'column'} mb={'1rem'} mr={['5rem', null, null, '20rem']} ml={['5rem', null, null, '20rem']}>
+    <Center bg="gray.700" height={'100vh'} rounded="3xl" mx={'3rem'} mb="3rem">
+      <Flex flexDirection={'column'} mb={'1rem'} mx={['5rem', null, null, '20rem']}>
         <Center>
-          <Text fontSize={'3xl'} marginBottom={'1rem'} color={'gray.400'}>
+          <Text fontSize={'3xl'} marginBottom={'1rem'} color={'gray.400'} textAlign={'center'}>
             Another Section
           </Text>
         </Center>
 
-        <Box fontSize={'sm'} textAlign={'center'} color={'gray.400'}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel laoreet purus. Quisque quis congue turpis,
-          eget vehicula dolor. Donec varius pretium lorem vel auctor. Nunc eu facilisis quam. Curabitur lobortis leo sit amet sem
-          vulputate pellentesque. Etiam sit amet sem volutpat magna ullamcorper mollis. Donec placerat rhoncus metus, quis egestas
-          quam molestie ut. Nam tristique pharetra semper.
+        <Box fontSize={'lg'} textAlign={'center'} color={'gray.400'}>
+          Yeeha!
         </Box>
       </Flex>
     </Center>
