@@ -3,9 +3,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useCallback } from 'react'
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
+import { Project } from './Project'
 
 export const Section1 = () => {
-  const autoplay = Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })
+  const autoplay = Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' }, [autoplay])
 
   const scrollPrev = useCallback(() => {
@@ -18,37 +19,42 @@ export const Section1 = () => {
 
   const scrollTo = useCallback((index: any) => emblaApi && emblaApi.scrollTo(index), [emblaApi])
 
-  const emblaSlideStyles = { flex: '0 0 100%', maxWidth: '100%', marginRight: '20px', marginLeft: '20px' }
+  const emblaSlideStyles = { flex: '0 0 100%', maxWidth: '100%', marginRight: '2rem', marginLeft: '2rem' }
+
   return (
     <>
       <Center height={'100vh'} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem">
         <Flex className="embla" overflow="hidden" maxHeight="100%" rounded="3xl" position="relative">
           <Flex className="embla__viewport" rounded={'3xl'} ref={emblaRef}>
             <Flex className="embla__container" h={['100vh', '80vh', '70vh', '70vh']} w={['100vw', '80vw', '70vw', '70vw']}>
-              <Image
-                fontSize="3xl"
-                className="embla__slide"
+              <Project
                 style={emblaSlideStyles}
-                alt="first image"
-                src="/images/first.jpg"
-                rounded="3xl"
-                w="100%"
+                bg="bg1.png"
+                projectName="English Learning Assistant"
+                gradientStyle="linear"
+                gradientDirection="to-tr"
+                gradientColor1="#000000"
+                gradientColor2="#130F40"
+                textColor="gray.400"
               />
-              <Image
-                fontSize="3xl"
-                className="embla__slide"
+              <Project
                 style={emblaSlideStyles}
-                alt="second image"
-                src="/images/second.jpg"
-                rounded="3xl"
+                bg="bg2.png"
+                projectName="GENEO"
+                textColor="gray.400"
+                gradientStyle="linear"
+                gradientDirection="to-bl"
+                gradientColor1="#000"
+                gradientColor2="#A55C1B"
               />
-              <Image
-                fontSize="3xl"
-                className="embla__slide"
+              <Project
                 style={emblaSlideStyles}
-                alt="third image"
-                src="/images/third.jfif"
-                rounded="3xl"
+                bg="bg3.png"
+                projectName="AHK Script"
+                textColor="gray.400"
+                gradientStyle="radial"
+                gradientColor1="#474747"
+                gradientColor2="#000000"
               />
             </Flex>
           </Flex>
@@ -62,7 +68,7 @@ export const Section1 = () => {
             onClick={scrollPrev}
             position="absolute"
             alignSelf="center"
-            left="2"
+            left="5"
           />
           <IconButton
             variant="unstyled"
@@ -74,7 +80,7 @@ export const Section1 = () => {
             onClick={scrollNext}
             position="absolute"
             alignSelf="center"
-            right="2"
+            right="5"
           />
         </Flex>
       </Center>

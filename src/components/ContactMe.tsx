@@ -17,8 +17,12 @@ export const ContactMe = () => {
           <Flex flexDir={'column'} gap="1rem">
             <Input color="gray.400" placeholder="Name"></Input>
             <Input color="gray.400" placeholder="Email"></Input>
-            <Textarea color="gray.400" placeholder="Message" h="8rem" maxH="15rem"></Textarea>
-            <Button mt="1em">Submit</Button>
+            <Textarea color="gray.400" placeholder="Message" h="8rem" maxH="13rem"></Textarea>
+            <Center>
+              <Button w="auto" mt="1em">
+                Submit
+              </Button>
+            </Center>
           </Flex>
         </Center>
       </Flex>
