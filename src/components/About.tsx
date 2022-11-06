@@ -3,16 +3,16 @@ import { Center, Flex, Image, Text } from '@chakra-ui/react'
 export const About = () => {
   return (
     <>
+      <Image
+        display={'flex'}
+        src="/images/animation.svg"
+        alt="background animation"
+        position={'absolute'}
+        w="100%"
+        h="88vh"
+        zIndex={'0'}
+      />
       <Flex h="88vh">
-        <Image
-          display={'flex'}
-          src="/images/animation.svg"
-          alt="background animation"
-          position={'absolute'}
-          w="100%"
-          maxH="88vh"
-          zIndex={'0'}
-        />
         <Center w={'100%'} maxH="88vh">
           <Flex mx="3rem" maxWidth={'100%'}>
             <Center>

@@ -9,7 +9,7 @@ import { ContactMe } from '../components/ContactMe'
 export default function Home() {
   return (
     <>
-      <Flex bgGradient={'linear(to-b, black, #0f0f0f)'} minHeight={'100vh'} flexDirection={'column'} overflow="auto">
+      <Flex bgGradient={'linear(to-b, black, #030303)'} minHeight={'100vh'} flexDirection={'column'} overflow="auto">
         <div id="about">
           <Header />
           <About />
