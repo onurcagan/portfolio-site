@@ -3,7 +3,7 @@ import { About } from '../components/About'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { ScrollToTop } from '../components/ScrollToTop'
-import { Section1 } from '../components/Section1'
+import { Section1 } from '../components/ProjectsSection'
 import { ContactMe } from '../components/ContactMe'
 
 export default function Home() {
