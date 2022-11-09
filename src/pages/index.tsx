@@ -31,10 +31,10 @@ export default function Home() {
             <Header />
             <About />
           </div>
-          <div id="section1">
+          <div id="projects-section">
             <ProjectsSection />
           </div>
-          <div id="contactme">
+          <div id="contact-me">
             <ContactMe />
           </div>
           <Footer />

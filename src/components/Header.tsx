@@ -14,12 +14,12 @@ export const Header = () => {
             Home
           </Button>
         </Link>
-        <Link href="#section1">
+        <Link href="#projects-section">
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Projects
           </Button>
         </Link>
-        <Link href="#contactme">
+        <Link href="#contact-me">
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Contact Me
           </Button>
@@ -40,7 +40,7 @@ export const Header = () => {
           top={'0'}
           left={'0'}
           pos={'fixed'}
-          bgColor={'gray.800'}
+          bg={`url('/images/texture.svg'), linear-gradient(to bottom, black, #3a3838)`}
           zIndex={'30'}
           height={'100vh'}
           width={'100vw'}
@@ -66,12 +66,12 @@ export const Header = () => {
                 Home
               </Button>
             </Link>
-            <Link href="#section1">
+            <Link href="#projects-section">
               <Button colorScheme="gray" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
                 Projects
               </Button>
             </Link>
-            <Link href="#contactme">
+            <Link href="#contact-me">
               <Button colorScheme="gray" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
                 Contact Me
               </Button>

@@ -23,7 +23,7 @@ export const ProjectsSection = () => {
 
   return (
     <>
-      <Center height={'100vh'} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem" overflowX={'hidden'}>
+      <Center height={'100vh'} my={['3rem', 'null']} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem" overflowX={'hidden'}>
         <Flex className="embla" overflow="hidden" maxHeight="100%" rounded="3xl" position="relative">
           <Flex className="embla__viewport" rounded={'3xl'} ref={emblaRef}>
             <Flex className="embla__container" h={['100vh', '80vh', '70vh', '70vh']} w={['100vw', '80vw', '70vw', '70vw']}>

@@ -3,14 +3,22 @@ import { Container, Stack, Flex, Image, Text } from '@chakra-ui/react'
 export const About = () => {
   return (
     <>
-      <Flex h="88vh" w="100%" flexDir={['column', 'row']} gap="1rem" pos="relative" textAlign={'left'} justifyContent="center">
-        <Flex w="100%" flexDir={'column'} pt={['2rem', null]}>
+      <Flex
+        h="88vh"
+        w="100%"
+        flexDir={['column', 'column', 'row']}
+        gap="1rem"
+        pos="relative"
+        textAlign={'left'}
+        justifyContent="center"
+      >
+        <Flex w="100%" flexDir={'column'} mx="auto" pt={['3rem', '3rem', null]}>
           <Text
             as="b"
-            fontSize={['2.5rem', '8xl']}
+            fontSize={['2rem', '2rem', '4.5rem', '5rem']}
             textAlign="left"
-            ml={['auto', '5rem']}
-            mr={['auto', null]}
+            ml={['auto', 'auto', '5rem']}
+            mr={['auto', 'auto', null]}
             color="gray.50"
             size="lg"
             zIndex="4"
@@ -20,11 +28,11 @@ export const About = () => {
           </Text>
           <Text
             as="em"
-            fontSize={['1.5rem', '7xl']}
-            textAlign="left"
+            fontSize={['1.5rem', '1.5rem', '2rem', '3.8rem']}
+            textAlign="center"
             ml="auto"
-            mr={['auto', '5rem']}
-            my={[null, 'auto']}
+            mr={['auto', 'auto', '5rem']}
+            my={[null, null, 'auto']}
             color="gray.50"
             size="lg"
             zIndex="4"
@@ -33,11 +41,11 @@ export const About = () => {
           </Text>
           <Text
             as="i"
-            fontSize={['1.5rem', '6xl']}
-            textAlign="left"
-            ml={['auto', '5rem']}
-            mr={['auto', null]}
-            mb={['null', '2rem']}
+            fontSize={['1.5rem', '1.5rem', '1.9rem', '3rem']}
+            textAlign="center"
+            ml={['auto', 'auto', '5rem']}
+            mr={['auto', 'auto', null]}
+            mb={['null', 'null', '2rem']}
             color="gray.50"
             size="lg"
             zIndex="4"
@@ -50,15 +58,16 @@ export const About = () => {
           alt="A portrait photo of me."
           src="/images/profile.png"
           maxH="88vh"
-          minH="50vh"
+          minH="30vh"
           objectFit={'contain'}
-          w={[null, '100%']}
-          maxW={[null, '100%']}
+          w={[null, null, '100%']}
+          maxW={[null, null, '100%']}
           zIndex={'2'}
           bottom="0"
+          mt="auto"
           mx="auto"
-          pos={['relative', 'absolute']}
-          justifySelf="center"
+          pos={['relative', 'relative', 'absolute']}
+          justifySelf="end"
         />
       </Flex>
     </>
