@@ -5,7 +5,7 @@ import { useCallback } from 'react'
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 import { Project } from './Project'
 
-export const Section1 = () => {
+export const ProjectsSection = () => {
   const autoplay = Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' }, [autoplay])
 
@@ -23,38 +23,35 @@ export const Section1 = () => {
 
   return (
     <>
-      <Center height={'100vh'} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem">
+      <Center height={'100vh'} alignItems={'center'} p="1rem" rounded="3xl" mx="3rem" overflowX={'hidden'}>
         <Flex className="embla" overflow="hidden" maxHeight="100%" rounded="3xl" position="relative">
           <Flex className="embla__viewport" rounded={'3xl'} ref={emblaRef}>
             <Flex className="embla__container" h={['100vh', '80vh', '70vh', '70vh']} w={['100vw', '80vw', '70vw', '70vw']}>
               <Project
                 style={emblaSlideStyles}
-                bg="bg1.png"
                 projectName="English Learning Assistant"
                 gradientStyle="linear"
                 gradientDirection="to-tr"
-                gradientColor1="#000000"
+                gradientColor1="transparent"
                 gradientColor2="#130F40"
                 textColor="gray.400"
               />
               <Project
                 style={emblaSlideStyles}
-                bg="bg2.png"
                 projectName="GENEO"
                 textColor="gray.400"
                 gradientStyle="linear"
                 gradientDirection="to-bl"
-                gradientColor1="#000"
+                gradientColor1="transparent"
                 gradientColor2="#A55C1B"
               />
               <Project
                 style={emblaSlideStyles}
-                bg="bg3.png"
                 projectName="AHK Script"
                 textColor="gray.400"
                 gradientStyle="radial"
-                gradientColor1="#474747"
-                gradientColor2="#000000"
+                gradientColor1="#02390d"
+                gradientColor2="transparent"
               />
             </Flex>
           </Flex>

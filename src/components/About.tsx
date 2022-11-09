@@ -1,43 +1,65 @@
-import { Center, Flex, Image, Text } from '@chakra-ui/react'
+import { Container, Stack, Flex, Image, Text } from '@chakra-ui/react'
 
 export const About = () => {
   return (
     <>
-      <Image
-        display={'flex'}
-        src="/images/animation.svg"
-        alt="background animation"
-        position={'absolute'}
-        w="100%"
-        h="88vh"
-        zIndex={'0'}
-      />
-      <Flex h="88vh">
-        <Center w={'100%'} maxH="88vh">
-          <Flex mx="3rem" maxWidth={'100%'}>
-            <Center>
-              <Flex flexDir={'column'} mr="-30rem">
-                <Text as="b" fontSize={'8xl'} color="gray.50" size="lg" zIndex="4">
-                  Hi.
-                </Text>
-                <Text as="em" fontSize={'7xl'} color="gray.50" size="lg" zIndex="4">
-                  I&apos;m <strong>Onur.</strong>
-                </Text>
-                <Text as="i" fontSize={'7xl'} color="gray.50" size="lg" zIndex="4">
-                  A Web Developer.
-                </Text>
-              </Flex>
-            </Center>
-            <Image
-              borderRadius={'none'}
-              alt="A photo of me running super fast."
-              src="/images/profile.png"
-              maxH="88vh"
-              maxWidth="100%"
-              zIndex={'2'}
-            ></Image>
-          </Flex>
-        </Center>
+      <Flex h="88vh" w="100%" flexDir={['column', 'row']} gap="1rem" pos="relative" textAlign={'left'} justifyContent="center">
+        <Flex w="100%" flexDir={'column'} pt={['2rem', null]}>
+          <Text
+            as="b"
+            fontSize={['2.5rem', '8xl']}
+            textAlign="left"
+            ml={['auto', '5rem']}
+            mr={['auto', null]}
+            color="gray.50"
+            size="lg"
+            zIndex="4"
+          >
+            Hi.
+            <br />
+          </Text>
+          <Text
+            as="em"
+            fontSize={['1.5rem', '7xl']}
+            textAlign="left"
+            ml="auto"
+            mr={['auto', '5rem']}
+            my={[null, 'auto']}
+            color="gray.50"
+            size="lg"
+            zIndex="4"
+          >
+            I&apos;m <strong>Onur.</strong> <br />
+          </Text>
+          <Text
+            as="i"
+            fontSize={['1.5rem', '6xl']}
+            textAlign="left"
+            ml={['auto', '5rem']}
+            mr={['auto', null]}
+            mb={['null', '2rem']}
+            color="gray.50"
+            size="lg"
+            zIndex="4"
+          >
+            A Software Developer.
+          </Text>
+        </Flex>
+        <Image
+          className="image"
+          alt="A portrait photo of me."
+          src="/images/profile.png"
+          maxH="88vh"
+          minH="50vh"
+          objectFit={'contain'}
+          w={[null, '100%']}
+          maxW={[null, '100%']}
+          zIndex={'2'}
+          bottom="0"
+          mx="auto"
+          pos={['relative', 'absolute']}
+          justifySelf="center"
+        />
       </Flex>
     </>
   )

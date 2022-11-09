@@ -7,7 +7,7 @@ export const Header = () => {
   const [display, setDisplay] = useState('none')
 
   return (
-    <Box bg={'blackAlpha.100'} maxHeight={'12vh'} height="12vh" display={'flex'} verticalAlign={'center'}>
+    <Box maxHeight={'12vh'} height="12vh" display={'flex'} verticalAlign={'center'}>
       <Flex maxHeight={'100%'} mr="3rem" gap={'3rem'} display={['none', 'flex', 'flex', 'flex']} ml="auto" alignItems={'center'}>
         <Link href="#about">
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
@@ -33,7 +33,7 @@ export const Header = () => {
           aria-label="Open Menu"
           alignSelf={'center'}
           icon={<HamburgerIcon />}
-          colorScheme="purple"
+          colorScheme="gray"
           onClick={() => setDisplay('flex')}
         />
         <Flex
@@ -50,11 +50,11 @@ export const Header = () => {
           overflow={'auto'}
         >
           <IconButton
-            colorScheme={'purple'}
-            mt="1rem"
+            colorScheme={'gray'}
+            mt="1.3rem"
             ml={'auto'}
             mr="2rem"
-            size={'sm'}
+            size={'md'}
             width={'1rem'}
             aria-label="Close Icon"
             icon={<CloseIcon />}
@@ -62,17 +62,17 @@ export const Header = () => {
           />
           <Flex flexDir="column" pr="2rem" pl="2rem" gap={'3rem'} alignItems="center">
             <Link href="#about">
-              <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
+              <Button colorScheme="gray" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
                 Home
               </Button>
             </Link>
             <Link href="#section1">
-              <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
+              <Button colorScheme="gray" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
                 Projects
               </Button>
             </Link>
             <Link href="#contactme">
-              <Button colorScheme="purple" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
+              <Button colorScheme="gray" size={'lg'} minWidth="60vw" onClick={() => setDisplay('none')}>
                 Contact Me
               </Button>
             </Link>

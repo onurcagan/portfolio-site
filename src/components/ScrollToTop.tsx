@@ -1,5 +1,5 @@
 import { ArrowUpIcon } from '@chakra-ui/icons'
-import { IconButton } from '@chakra-ui/react'
+import { Container, IconButton } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 
 export const ScrollToTop = () => {
@@ -27,8 +27,8 @@ export const ScrollToTop = () => {
           icon={<ArrowUpIcon />}
           size="lg"
           position="fixed"
-          bottom={'1rem'}
-          right="1rem"
+          bottom="2rem"
+          right="2rem"
           onClick={goToTop}
         />
       )}
