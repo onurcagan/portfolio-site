@@ -3,8 +3,9 @@ import { About } from '../components/About'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { ScrollToTop } from '../components/ScrollToTop'
-import { ProjectsSection } from '../components/ProjectsSection'
+import { ProjectsSectionWithCarousel } from '../components/ProjectsSectionWithCarousel'
 import { ContactMe } from '../components/ContactMe'
+import { ProjectsSection } from '../components/ProjectsSection'
 
 export default function Home() {
   return (

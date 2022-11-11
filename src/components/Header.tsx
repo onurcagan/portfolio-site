@@ -40,7 +40,7 @@ export const Header = () => {
           top={'0'}
           left={'0'}
           pos={'fixed'}
-          bg={`url('/images/texture.svg'), linear-gradient(to bottom, black, #3a3838)`}
+          bg={`linear-gradient(to bottom, black, #222121)`}
           zIndex={'30'}
           height={'100vh'}
           width={'100vw'}

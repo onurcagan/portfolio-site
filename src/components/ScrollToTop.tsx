@@ -13,11 +13,34 @@ export const ScrollToTop = () => {
       }
     })
   }, [])
+
+  const TIMINGFUNC_MAP: any = {
+    linear: (t: any) => t,
+    'ease-in': (t: any) => t * t,
+    'ease-out': (t: any) => t * (2 - t),
+    'ease-in-out': (t: any) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t),
+  }
+
+  function scrollTopSmooth(initY: any, duration = 300, timingName = 'linear') {
+    const timingFunc = TIMINGFUNC_MAP[timingName]
+    let start: any = null
+    const step = (timestamp: any) => {
+      start = start || timestamp
+      const progress = timestamp - start,
+        // Growing from 0 to 1
+        time = Math.min(1, (timestamp - start) / duration)
+
+      window.scrollTo(0, initY - timingFunc(time) * initY)
+      if (progress < duration) {
+        window.requestAnimationFrame(step)
+      }
+    }
+
+    window.requestAnimationFrame(step)
+  }
+
   const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
+    scrollTopSmooth(window.scrollY, 300, 'ease-in-out')
   }
   return (
     <>

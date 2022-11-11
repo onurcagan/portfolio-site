@@ -19,7 +19,8 @@ export const About = () => {
             textAlign="left"
             ml={['auto', 'auto', '5rem']}
             mr={['auto', 'auto', null]}
-            color="gray.50"
+            bgGradient={'linear(to-b, #8A2387,#E94057,#F27121)'}
+            bgClip={'text'}
             size="lg"
             zIndex="4"
           >
@@ -36,8 +37,19 @@ export const About = () => {
             color="gray.50"
             size="lg"
             zIndex="4"
+            display={'inline-block'}
           >
-            I&apos;m <strong>Onur.</strong> <br />
+            I&apos;m{' '}
+            <Text
+              fontSize={['1.8rem', '1.8rem', '3rem', '4rem']}
+              as="b"
+              display={'inline-block'}
+              bgGradient={'linear(to-r, #fe8c00,#f83600)'}
+              bgClip={'text'}
+            >
+              Onur.
+            </Text>{' '}
+            <br />
           </Text>
           <Text
             as="i"
@@ -56,7 +68,7 @@ export const About = () => {
         <Image
           className="image"
           alt="A portrait photo of me."
-          src="/images/profile.png"
+          src="/images/profile1.webp"
           maxH="88vh"
           minH="30vh"
           objectFit={'contain'}
