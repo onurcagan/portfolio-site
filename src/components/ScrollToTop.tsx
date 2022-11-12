@@ -46,13 +46,14 @@ export const ScrollToTop = () => {
     <>
       {showTopBtn && (
         <IconButton
-          aria-label="scroll to top"
+          aria-label='scroll to top'
           icon={<ArrowUpIcon />}
-          size="lg"
-          position="fixed"
-          bottom="2rem"
-          right="2rem"
+          size='lg'
+          position='fixed'
+          bottom='2rem'
+          right='2rem'
           onClick={goToTop}
+          zIndex='10'
         />
       )}
     </>

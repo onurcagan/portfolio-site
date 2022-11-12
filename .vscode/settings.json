@@ -1,15 +1,10 @@
 {
-  "cSpell.words": [
-    "animatedtest",
-    "autoplay",
-    "backgroundsvg",
-    "contactme",
-    "coolicon",
-    "embla",
-    "GENEO",
-    "jfif",
-    "TIMINGFUNC",
-    "webp",
-    "Yeeha"
-  ]
+  "cSpell.words": ["animatedtest", "autoplay", "backgroundsvg", "contactme", "coolicon", "embla", "jfif", "Yeeha"],
+  "prettier.trailingComma": "all",
+  "prettier.endOfLine": "auto",
+  "prettier.jsxSingleQuote": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 100
 }

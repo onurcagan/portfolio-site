@@ -1,8 +1,5 @@
-import { Center, Box, Image, Stack, Heading, Text } from '@chakra-ui/react'
-export const Card = () => {
-  const IMAGE =
-    'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
-
+import { Center, Box, Image, Stack, Heading, Text, Flex } from '@chakra-ui/react'
+export const Card = ({ subText, projectName, projectShortDetail }: any) => {
   return (
     <Center py={12}>
       <Box
@@ -15,6 +12,7 @@ export const Card = () => {
         rounded={'lg'}
         pos={'relative'}
         zIndex={1}
+        minH='440px'
       >
         <Box
           rounded={'lg'}
@@ -29,7 +27,7 @@ export const Card = () => {
             pos: 'absolute',
             top: 7,
             left: 0,
-            backgroundImage: `url(${IMAGE})`,
+            backgroundImage: `url(${'/images/placeHolder.jpeg'})`,
             filter: 'blur(15px)',
             zIndex: -1,
           }}
@@ -39,24 +37,35 @@ export const Card = () => {
             },
           }}
         >
-          <Image alt="Project Image" rounded={'lg'} height={230} width={282} objectFit={'cover'} src={IMAGE} />
+          <Image
+            alt='Project Image'
+            rounded={'lg'}
+            height={230}
+            width={282}
+            objectFit={'cover'}
+            src={'/images/placeHolder.jpeg'}
+          />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-            Brand
+          <Text color={'gray.500'} fontSize={'sm'}>
+            {subText}
           </Text>
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-            Nice Chair, pink
+            {projectName}
           </Heading>
-          <Stack direction={'row'} align={'center'}>
-            <Text fontWeight={800} fontSize={'xl'}>
-              $57
-            </Text>
-            <Text textDecoration={'line-through'} color={'gray.600'}>
-              $199
-            </Text>
-          </Stack>
         </Stack>
+        <Flex alignItems={'center'} justifyContent='center'>
+          <Text
+            fontWeight={400}
+            fontSize={'medium'}
+            textAlign='center'
+            alignItems={'flex-end'}
+            w='100%'
+            my={'auto'}
+          >
+            {projectShortDetail}
+          </Text>
+        </Flex>
       </Box>
     </Center>
   )
