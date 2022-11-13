@@ -21,7 +21,7 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
       <Link href='/loading'>
         <ChakraBox
           whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.7 }}
+          whileTap={{ scale: 0.9 }}
           // @ts-ignore no problem in operation, although type error appears.
           transition={{
             type: 'spring',
