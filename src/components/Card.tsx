@@ -16,9 +16,10 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
   })
 
   return (
-    <Center py={12}>
+    <Center py={8}>
       <ChakraBox
         whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.7 }}
         // @ts-ignore no problem in operation, although type error appears.
         transition={{
           type: 'spring',
@@ -27,20 +28,24 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
         }}
         role={'group'}
         p={6}
-        maxW={'330px'}
+        maxW={'340px'}
         w={'full'}
         bg={'white'}
         boxShadow={'2xl'}
         rounded={'lg'}
         pos={'relative'}
         zIndex={1}
-        minH='440px'
+        minH='500px'
+        display={'flex'}
+        flexDir='column'
       >
         <ChakraBox
           rounded={'lg'}
           mt={-12}
           pos={'relative'}
           height={'230px'}
+          display='flex'
+          justifyContent='center'
           _after={{
             transition: 'all .3s ease',
             content: '""',
@@ -63,24 +68,24 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
             alt='Project Image'
             rounded={'lg'}
             height={230}
-            width={282}
+            width={'95%'}
             objectFit={'cover'}
             src={'/images/placeHolder.jpeg'}
           />
         </ChakraBox>
         <Stack pt={'2.5rem'} align={'center'}>
-          <Text color={'gray.500'} fontSize={'sm'}>
+          <Text color={'gray.500'} fontSize={'sm'} textAlign='center'>
             {subText}
           </Text>
           <Heading fontSize={'2xl'} fontFamily={'body'} textAlign='center' fontWeight={500}>
             {projectName}
           </Heading>
         </Stack>
-        <Center h='110px' pt='1rem'>
+        <Flex pt='1rem' justifyContent={'center'} my='auto'>
           <Text fontWeight={400} fontSize={'medium'} textAlign='center'>
             {projectShortDetail}
           </Text>
-        </Center>
+        </Flex>
       </ChakraBox>
     </Center>
   )
