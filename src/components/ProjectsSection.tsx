@@ -1,4 +1,4 @@
-import { Center, Flex, SimpleGrid } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { Card } from './Card'
 
 export const ProjectsSection = () => {
@@ -16,26 +16,26 @@ export const ProjectsSection = () => {
     >
       <Card
         projectShortDetail={`This product is about automating a medical process. I worked on front and the back-end of this application.`}
-        subText={'Desktop App - C# / WPF'}
+        subText={'Desktop App - C# · WPF'}
         projectName={'GENEO'}
       />
       <Card
         projectShortDetail={
           'This site was developed to generate random English words and provide definitions, example sentences, synonyms and pronunciations.'
         }
-        subText={'CRA Site - TS / React Query'}
+        subText={'CRA Site - TS · React Query'}
         projectName={'English Learning Assistant'}
       />
       <Card
         projectShortDetail={
           'A script I wrote to notify employees about the arrival of new tickets which saves the need to manually refresh and be present by the computer.'
         }
-        subText={'Automation - AutoHotkey / Slack Bot'}
+        subText={'Automation - AutoHotkey · Slack Bot'}
         projectName={'Ticket Notifier Script'}
       />
       <Card
         projectShortDetail={'A quick calculator app I built using WPF to get the hang of things.'}
-        subText={'Learning Project - C# / WPF'}
+        subText={'Learning Project - C# · WPF'}
         projectName={'ReCalculator'}
       />
     </Flex>

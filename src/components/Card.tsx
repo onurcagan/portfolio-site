@@ -1,8 +1,30 @@
-import { Center, Box, Image, Stack, Heading, Text, Flex } from '@chakra-ui/react'
+import {
+  Center,
+  Image,
+  Stack,
+  Heading,
+  Text,
+  Flex,
+  chakra,
+  shouldForwardProp,
+} from '@chakra-ui/react'
+import { isValidMotionProp, motion } from 'framer-motion'
+
 export const Card = ({ subText, projectName, projectShortDetail }: any) => {
+  const ChakraBox = chakra(motion.div, {
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+  })
+
   return (
     <Center py={12}>
-      <Box
+      <ChakraBox
+        whileHover={{ scale: 1.08 }}
+        // @ts-ignore no problem in operation, although type error appears.
+        transition={{
+          type: 'spring',
+          stiffness: 600,
+          damping: 10,
+        }}
         role={'group'}
         p={6}
         maxW={'330px'}
@@ -14,7 +36,7 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
         zIndex={1}
         minH='440px'
       >
-        <Box
+        <ChakraBox
           rounded={'lg'}
           mt={-12}
           pos={'relative'}
@@ -33,7 +55,7 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
           }}
           _groupHover={{
             _after: {
-              filter: 'blur(20px)',
+              filter: 'blur(30px)',
             },
           }}
         >
@@ -45,28 +67,21 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
             objectFit={'cover'}
             src={'/images/placeHolder.jpeg'}
           />
-        </Box>
-        <Stack pt={10} align={'center'}>
+        </ChakraBox>
+        <Stack pt={'2.5rem'} align={'center'}>
           <Text color={'gray.500'} fontSize={'sm'}>
             {subText}
           </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Heading fontSize={'2xl'} fontFamily={'body'} textAlign='center' fontWeight={500}>
             {projectName}
           </Heading>
         </Stack>
-        <Flex alignItems={'center'} justifyContent='center'>
-          <Text
-            fontWeight={400}
-            fontSize={'medium'}
-            textAlign='center'
-            alignItems={'flex-end'}
-            w='100%'
-            my={'auto'}
-          >
+        <Center h='110px' pt='1rem'>
+          <Text fontWeight={400} fontSize={'medium'} textAlign='center'>
             {projectShortDetail}
           </Text>
-        </Flex>
-      </Box>
+        </Center>
+      </ChakraBox>
     </Center>
   )
 }
