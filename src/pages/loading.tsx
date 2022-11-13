@@ -4,14 +4,13 @@ import { ProjectMain } from '../components/ProjectMain'
 export default function SomeComponent() {
   return (
     <Flex
-      bgGradient={'linear(to-b, black, #030303)'}
+      bg={`url('/images/texture.svg'), linear-gradient(to top, black, #3a3838	 ) `}
       minHeight={'100vh'}
       flexDirection={'column'}
-      overflow='auto'
+      alignContent={'center'}
+      justifyContent='center'
     >
-      <Center>
-        <ProjectMain />
-      </Center>
+      <ProjectMain />
     </Flex>
   )
 }

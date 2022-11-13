@@ -18,20 +18,21 @@ export const ProjectsSection = () => {
         w={['100%', '100%', '100%', '60%', '100%']}
       >
         <Card
-          projectShortDetail={`This product is about automating a medical process. I worked on front and the back-end of this application.`}
+          projectShortDetail={`Automates a medical process. I worked on front and the back-end of this application.`}
           subText={'Desktop App - C# · WPF'}
           projectName={'GENEO'}
         />
+
         <Card
           projectShortDetail={
-            'This site was developed to generate random English words and provide definitions, example sentences, synonyms and pronunciations.'
+            'Generates random English words and provides definitions, example sentences, synonyms and pronunciations.'
           }
           subText={'CRA Site - TS · React Query'}
           projectName={'English Learning Assistant'}
         />
         <Card
           projectShortDetail={
-            'A script I wrote to notify employees about the arrival of new tickets which saves the need to manually refresh and be present by the computer.'
+            'Notifies employees about the arrival of new tickets which saves the need to manually refresh and be present by the computer.'
           }
           subText={'Automation - AHK · Slack Bot'}
           projectName={'Ticket Notifier Script'}
