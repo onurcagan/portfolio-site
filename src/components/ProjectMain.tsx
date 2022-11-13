@@ -1,4 +1,4 @@
-import { Center, Flex, Image, Text } from '@chakra-ui/react'
+import { Flex, Image, Text } from '@chakra-ui/react'
 
 export const ProjectMain = () => {
   return (
@@ -8,9 +8,9 @@ export const ProjectMain = () => {
           Ayy, you got here way too early, relax a little.
         </Text>
         <Text fontSize={['md', '2xl']} color={'white'} px='1.5rem' textAlign='center'>
-          We'll let the boss know you're here.
+          We&apos;ll let the boss know you&apos;re here.
         </Text>
-        <Image mt='1rem' src='/images/uc.png' />
+        <Image alt='under construction doodle' mt='1rem' src='/images/uc.png' />
       </Flex>
     </>
   )
