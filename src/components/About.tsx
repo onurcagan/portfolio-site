@@ -12,75 +12,79 @@ export const About = () => {
         textAlign={'left'}
         justifyContent='center'
         mb='0.1rem' // to prevent the bottom bit of the photo showing up on the projects section
+        position='relative'
       >
-        <Flex w='100%' flexDir={'column'} mx='auto' pt={['3rem', '3rem', null]}>
+        <Flex
+          w='100%'
+          flexDir={'column'}
+          mx='auto'
+          pt={['3rem', '3rem', null]}
+          mt={['5vw', '10vw']}
+          mb='auto'
+        >
           <Text
-            as='b'
-            fontSize={['2rem', '2rem', '4.5rem', '5rem']}
-            textAlign='left'
-            ml={['auto', 'auto', '5rem']}
+            fontWeight={'extrabold'}
+            fontSize={['2rem', '2rem', '3.5rem', '4rem']}
+            textAlign={['center', 'left']}
+            ml={['auto', 'auto', '10vw']}
             mr={['auto', 'auto', null]}
             bgGradient={'linear(to-b, #8A2387,#E94057,#F27121)'}
             bgClip={'text'}
-            size='lg'
             zIndex='4'
           >
             Hi.
             <br />
           </Text>
           <Text
-            as='em'
-            fontSize={['1.5rem', '1.5rem', '2rem', '3.8rem']}
-            textAlign='center'
-            ml='auto'
-            mr={['auto', 'auto', '5rem']}
-            my={[null, null, 'auto']}
+            fontSize={['1.8rem', '1.8rem', '2.3rem', '3.2rem']}
+            textAlign={['center', 'left']}
+            ml={['auto', 'auto', '10vw']}
+            mr={['auto', 'auto', null]}
             color='gray.50'
-            size='lg'
             zIndex='4'
             display={'inline-block'}
           >
             I&apos;m{' '}
             <Text
-              fontSize={['1.8rem', '1.8rem', '3rem', '4rem']}
+              fontSize={['1.8rem', '1.8rem', '2.3rem', '3.2rem']}
               as='b'
               display={'inline-block'}
               bgGradient={'linear(to-r, #fe8c00,#f83600)'}
               bgClip={'text'}
+              textAlign={['center', 'left']}
             >
               Onur.
             </Text>{' '}
             <br />
           </Text>
           <Text
-            as='i'
-            fontSize={['1.5rem', '1.5rem', '1.9rem', '3rem']}
-            textAlign='center'
-            ml={['auto', 'auto', '5rem']}
+            fontSize={['1.5rem', '1.5rem', '1.5rem', '2rem']}
+            textAlign={['center', 'left']}
+            ml={['auto', 'auto', '10vw']}
             mr={['auto', 'auto', null]}
             mb={['null', 'null', '2rem']}
             color='gray.50'
-            size='lg'
             zIndex='4'
           >
-            A Software Developer.
+            A Software Developer!
           </Text>
         </Flex>
         <Image
           className='image'
           alt='A portrait photo of me.'
           src='/images/profile1.webp'
-          maxH='88vh'
+          maxH={['60vh', '70vh', '88vh']}
           minH='30vh'
           objectFit={'contain'}
-          w={[null, null, '100%']}
-          maxW={[null, null, '100%']}
+          w={[null, null, '100vw']}
+          maxW={[null, null, '100vw']}
           zIndex={'2'}
           bottom='0'
           mt='auto'
-          mx='auto'
+          pl={[null, null, '15rem', '20rem']}
+          mx={['auto', 'auto', null]}
           pos={['relative', 'relative', 'absolute']}
-          justifySelf='end'
+          // justifySelf='end'
         />
       </Flex>
     </>

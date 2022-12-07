@@ -1,13 +1,4 @@
-import {
-  Center,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  Flex,
-  chakra,
-  shouldForwardProp,
-} from '@chakra-ui/react'
+import { Center, Image, Stack, Heading, Text, chakra, shouldForwardProp } from '@chakra-ui/react'
 import { isValidMotionProp, motion } from 'framer-motion'
 import Link from 'next/link'
 

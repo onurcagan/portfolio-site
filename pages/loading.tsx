@@ -1,5 +1,5 @@
 import { Center, Flex } from '@chakra-ui/react'
-import { ProjectMain } from '../components/ProjectMain'
+import { ProjectMain } from '../src/components/ProjectMain'
 
 export default function SomeComponent() {
   return (

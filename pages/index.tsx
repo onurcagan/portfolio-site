@@ -1,10 +1,10 @@
 import { Container, Flex, Image } from '@chakra-ui/react'
-import { About } from '../components/About'
-import { Footer } from '../components/Footer'
-import { Header } from '../components/Header'
-import { ScrollToTop } from '../components/ScrollToTop'
-import { ContactMe } from '../components/ContactMe'
-import { ProjectsSection } from '../components/ProjectsSection'
+import { About } from '../src/components/About'
+import { Footer } from '../src/components/Footer'
+import { Header } from '../src/components/Header'
+import { ScrollToTop } from '../src/components/ScrollToTop'
+import { ContactMe } from '../src/components/ContactMe'
+import { ProjectsSection } from '../src/components/ProjectsSection'
 
 export default function Home() {
   return (
