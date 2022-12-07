@@ -8,7 +8,7 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
   })
 
   return (
-    <Center py={8}>
+    <Center py={8} flexBasis='25%' minW='330px'>
       <Link href='/loading'>
         <ChakraBox
           whileHover={{ scale: 1.08 }}
