@@ -77,7 +77,7 @@ export const Card = ({ subText, projectName, projectShortDetail }: any) => {
           <Text my='auto' fontWeight={400} fontSize={'medium'} textAlign='center'>
             {projectShortDetail}
           </Text>
-          <Text color={'gray.500'} fontSize={'xs'} textAlign='center' bottom={'0'}>
+          <Text as='i' color={'gray.500'} fontSize={'xs'} textAlign='center' bottom={'0'}>
             Click for more details.
           </Text>
         </ChakraBox>
