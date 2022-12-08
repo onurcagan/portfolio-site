@@ -39,7 +39,7 @@ export default function ProjectPage() {
           nucleotide level. It also offers personalized reports on nutrition, sports,
           pharmacogenomics, and infection susceptibility. <br />
           <br /> I am proud of my contributions to the development of NEOseq and its impact on our
-          team's efficiency and productivity.
+          team&lsquo;s efficiency and productivity.
         </StyledText>
       )
       break
@@ -84,7 +84,7 @@ export default function ProjectPage() {
           <br />
           <br />
           English Learning Assistant has proven to be an effective learning tool, and I am proud of
-          the positive impact it has had on my fiancée's English skills.
+          the positive impact it has had on my fiancée&lsquo;s English skills.
         </StyledText>
       )
       break
@@ -100,8 +100,8 @@ export default function ProjectPage() {
           <br /> It is designed to be fast and easy to use, with a modern and intuitive interface.
           Recalculator can perform all the basic arithmetic operations. <br />
           <br />
-          Whether you're a student, a professional, or just someone who needs a calculator on a
-          daily basis, Recalculator is the perfect tool for you.
+          Whether you&lsquo;re a student, a professional, or just someone who needs a calculator on
+          a daily basis, Recalculator is the perfect tool for you.
           <br />
           <br /> Try it out today!
         </StyledText>
@@ -115,14 +115,14 @@ export default function ProjectPage() {
           <Text as='b' display={'inline'}>
             Ticket Notifier
           </Text>{' '}
-          is an AutoHotkey script that I created to improve my company's workflow.
+          is an AutoHotkey script that I created to improve my company&lsquo;s workflow.
           <br />
           <br /> It automatically sends notifications to the relevant departments and people when
           important developments occur. This helps to ensure that everyone is kept up to date and
           can take the necessary action in a timely manner.
           <br />
-          <br /> Ticket Notifier has significantly improved our team's efficiency and productivity,
-          and I'm proud to have contributed to its development.
+          <br /> Ticket Notifier has significantly improved our team&lsquo;s efficiency and
+          productivity, and I&lsquo;m proud to have contributed to its development.
         </StyledText>
       )
       break
@@ -151,7 +151,13 @@ export default function ProjectPage() {
       >
         {name}
       </Text>
-      <Image rounded={'2xl'} maxW={['90vw', '50vw', '30vw']} mx='auto' src={image}></Image>
+      <Image
+        rounded={'2xl'}
+        maxW={['90vw', '50vw', '30vw']}
+        mx='auto'
+        src={image}
+        alt='project photo'
+      ></Image>
       {description}
     </Flex>
   )
