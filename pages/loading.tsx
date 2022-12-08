@@ -1,7 +1,7 @@
 import { Center, Flex } from '@chakra-ui/react'
 import { ProjectMain } from '../src/components/ProjectMain'
 
-export default function SomeComponent() {
+export default function Loading() {
   return (
     <Flex
       bg={`url('/images/texture.svg'), linear-gradient(to top, black, #3a3838	 ) `}

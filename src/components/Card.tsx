@@ -2,22 +2,21 @@ import { Center, Image, Stack, Heading, Text, chakra, shouldForwardProp } from '
 import { isValidMotionProp, motion } from 'framer-motion'
 import Link from 'next/link'
 
-export const Card = ({ subText, projectName, projectShortDetail }: any) => {
+export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: any) => {
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
   })
 
   return (
     <Center py={8} flexBasis='25%' minW='330px'>
-      <Link href='/loading'>
+      <Link href={`/projects/${projectUrl}`}>
         <ChakraBox
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.03 }}
           // @ts-ignore no problem in operation, although type error appears.
           transition={{
             type: 'spring',
-            stiffness: 600,
-            damping: 10,
+            stiffness: 200,
+            damping: 25,
           }}
           role={'group'}
           p={6}
