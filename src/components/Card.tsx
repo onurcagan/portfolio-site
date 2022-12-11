@@ -1,4 +1,4 @@
-import { Center, Image, Stack, Heading, Text, chakra, shouldForwardProp } from '@chakra-ui/react'
+import { Center, Image, Stack, Text, chakra, shouldForwardProp } from '@chakra-ui/react'
 import { isValidMotionProp, motion } from 'framer-motion'
 import Link from 'next/link'
 
@@ -8,7 +8,7 @@ export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: a
   })
 
   return (
-    <Center py={8} flexBasis='25%' minW='330px'>
+    <Center py={8} flexBasis="25%" minW="330px">
       <Link href={`/projects/${projectUrl}`}>
         <ChakraBox
           whileHover={{ scale: 1.03 }}
@@ -27,17 +27,17 @@ export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: a
           rounded={'lg'}
           pos={'relative'}
           zIndex={1}
-          minH='500px'
+          minH="500px"
           display={'flex'}
-          flexDir='column'
+          flexDir="column"
         >
           <ChakraBox
             rounded={'lg'}
             mt={-12}
             pos={'relative'}
             height={'230px'}
-            display='flex'
-            justifyContent='center'
+            display="flex"
+            justifyContent="center"
             _after={{
               transition: 'all .3s ease',
               content: '""',
@@ -57,7 +57,7 @@ export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: a
             }}
           >
             <Image
-              alt='Project Image'
+              alt="Project Image"
               rounded={'lg'}
               height={230}
               width={'95%'}
@@ -66,17 +66,17 @@ export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: a
             />
           </ChakraBox>
           <Stack pt={'2.5rem'} align={'center'}>
-            <Text color={'gray.500'} fontSize={'sm'} textAlign='center'>
+            <Text color={'gray.500'} fontSize={'sm'} textAlign="center">
               {subText}
             </Text>
-            <Heading fontSize={'2xl'} fontFamily={'body'} textAlign='center' fontWeight={500}>
+            <Text fontSize={'2xl'} textAlign="center" fontWeight={900}>
               {projectName}
-            </Heading>
+            </Text>
           </Stack>
-          <Text my='auto' fontWeight={400} fontSize={'medium'} textAlign='center'>
+          <Text my="auto" fontWeight={400} fontSize={'medium'} textAlign="center">
             {projectShortDetail}
           </Text>
-          <Text as='i' color={'gray.500'} fontSize={'xs'} textAlign='center' bottom={'0'}>
+          <Text as="i" color={'gray.500'} fontSize={'xs'} textAlign="center" bottom={'0'}>
             Click for more details.
           </Text>
         </ChakraBox>
