@@ -1,10 +1,12 @@
-import { Text, Flex, Image, Stack, ComponentDefaultProps, Link, chakra, shouldForwardProp } from '@chakra-ui/react'
+import { Text, Flex, Image, ComponentDefaultProps, Link, chakra, shouldForwardProp, Skeleton } from '@chakra-ui/react'
 import { ReactJSXElement } from '@emotion/react/types/jsx-namespace'
 import { isValidMotionProp, motion } from 'framer-motion'
 
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 export default function ProjectPage() {
+  const [isLoaded, setIsLoaded] = useState(false)
   const router = useRouter()
   const { projectName } = router.query
 
@@ -130,6 +132,7 @@ export default function ProjectPage() {
       minHeight={'100vh'}
       flexDirection={'column'}
       justifyContent="center"
+      alignItems={'center'}
       py="1rem"
       gap={'2rem'}
       flexWrap="wrap"
@@ -137,7 +140,6 @@ export default function ProjectPage() {
       <ChakraButton
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.9 }}
-        alignSelf="center"
         border="1px"
         borderColor={'gray'}
         mt=".5rem"
@@ -171,7 +173,16 @@ export default function ProjectPage() {
         {name}
       </Text>
 
-      <Image rounded={'2xl'} maxW={['80vw', '50vw', '30vw']} mx="auto" src={image} alt="project photo"></Image>
+      <Skeleton isLoaded={isLoaded} fadeDuration={2}>
+        <Image
+          rounded={'2xl'}
+          maxW={['80vw', '50vw', '30vw']}
+          mx="auto"
+          src={image}
+          alt="project photo"
+          onLoad={() => setIsLoaded(true)}
+        ></Image>
+      </Skeleton>
 
       {description}
     </Flex>
