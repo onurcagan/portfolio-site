@@ -1,5 +1,18 @@
 {
-  "cSpell.words": ["animatedtest", "autoplay", "backgroundsvg", "contactme", "coolicon", "embla", "jfif", "Yeeha"],
+  "cSpell.words": [
+    "animatedtest",
+    "autoplay",
+    "backgroundsvg",
+    "contactme",
+    "coolicon",
+    "embla",
+    "jfif",
+    "neoseq",
+    "pharmacogenomics",
+    "Recalculator",
+    "webp",
+    "Yeeha"
+  ],
   "prettier.trailingComma": "all",
   "prettier.endOfLine": "auto",
   "prettier.jsxSingleQuote": true,
