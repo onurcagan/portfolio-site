@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import Cors from 'cors'
+import { words } from '../../data/words'
 
 // Initializing the cors middleware
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
@@ -26,5 +27,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await runMiddleware(req, res, cors)
 
   // Rest of the API logic
-  res.json({ message: 'Hello Everyone!' })
+  res.send(words)
 }
