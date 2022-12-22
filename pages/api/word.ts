@@ -26,6 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Run the middleware
   await runMiddleware(req, res, cors)
 
-  // Rest of the API logic
-  res.send(words)
+  // Randomly spit out one the 2999 most used english words.
+  res.send(words[Math.round(Math.random() * 2998)])
 }
