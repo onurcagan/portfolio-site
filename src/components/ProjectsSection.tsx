@@ -7,9 +7,6 @@ export const ProjectsSection = () => {
     <Center>
       <Flex
         position={'relative'}
-        // flexDir={['column', 'column', 'column', 'column', 'row']}
-        // display={['flex', 'flex', 'flex', 'grid', 'grid']}
-        // gridTemplateColumns={'repeat(3, 1fr)'}
         justify='center'
         gap='2rem'
         px='1rem'
