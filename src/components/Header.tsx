@@ -9,17 +9,17 @@ export const Header = () => {
   return (
     <Box maxHeight={'12vh'} height="12vh" display={'flex'} verticalAlign={'center'}>
       <Flex maxHeight={'100%'} mr="3rem" gap={'3rem'} display={['none', 'flex', 'flex', 'flex']} ml="auto" alignItems={'center'}>
-        <Link href="#about">
+        <Link href="#about" scroll={false}>
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Home
           </Button>
         </Link>
-        <Link href="#projects-section">
+        <Link href="#projects-section" scroll={false}>
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Projects
           </Button>
         </Link>
-        <Link href="#contact-me">
+        <Link href="#contact-me" scroll={false}>
           <Button colorScheme={'blackAlpha'} color={'gray.400'} variant={'link'}>
             Contact Me
           </Button>
