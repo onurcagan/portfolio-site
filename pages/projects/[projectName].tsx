@@ -58,20 +58,20 @@ export default function ProjectPage() {
       >
         {name}
       </Text>
-      <Button
-        color={'#fe8c00'}
-        variant={'link'}
-        onClick={() => {
-          if (url) {
-            router.push(`${url}`)
-          } else {
-            alert('This project is unfortunately not hosted.')
-          }
-          return
-        }}
-      >
-        Click to visit!
-      </Button>
+      {url && (
+        <Button
+          color={'#fe8c00'}
+          variant={'link'}
+          onClick={() => {
+            if (url) {
+              router.push(`${url}`)
+            }
+            return
+          }}
+        >
+          Click to visit!
+        </Button>
+      )}
       <Skeleton isLoaded={isLoaded} fadeDuration={2}>
         <Image
           rounded={'2xl'}
