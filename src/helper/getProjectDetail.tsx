@@ -15,6 +15,7 @@ export function getProjectDetail(projectName: string): getProjectDetailReturnTyp
   let name: string | undefined
   let image: string | undefined
   let description: ReactElement | undefined
+  let url: string | undefined
 
   switch (projectName) {
     case 'neoseq':
@@ -23,16 +24,15 @@ export function getProjectDetail(projectName: string): getProjectDetailReturnTyp
         'https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGV8ZW58MHx8MHx8&w=1000&q=80'
       description = (
         <StyledText>
-          <Text as='b'>NEOseq</Text> is a cutting-edge genomic data analysis platform that I was
-          heavily involved in developing as a front-end engineer. <br />
-          <br /> I was responsible for designing and implementing the user interface, as well as
-          integrating the front-end with the back-end. <br />
-          <br /> NEOseq provides real-time processing and interpretation of genomic data,
-          clinical-based analysis modules, and a coverage tool to guarantee precision at the
-          nucleotide level. It also offers personalized reports on nutrition, sports,
+          <Text as="b">NEOseq</Text> is a cutting-edge genomic data analysis platform that I was heavily involved in developing as
+          a front-end engineer. <br />
+          <br /> I was responsible for designing and implementing the user interface, as well as integrating the front-end with
+          the back-end. <br />
+          <br /> NEOseq provides real-time processing and interpretation of genomic data, clinical-based analysis modules, and a
+          coverage tool to guarantee precision at the nucleotide level. It also offers personalized reports on nutrition, sports,
           pharmacogenomics, and infection susceptibility. <br />
-          <br /> I am proud of my contributions to the development of NEOseq and its impact on our
-          team&lsquo;s efficiency and productivity.
+          <br /> I am proud of my contributions to the development of NEOseq and its impact on our team&lsquo;s efficiency and
+          productivity.
         </StyledText>
       )
       break
@@ -42,22 +42,21 @@ export function getProjectDetail(projectName: string): getProjectDetailReturnTyp
         'https://images.unsplash.com/photo-1537884944318-390069bb8665?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGV8ZW58MHx8MHx8&w=1000&q=80'
       description = (
         <StyledText>
-          <Text as='b' display={'inline'}>
+          <Text as="b" display={'inline'}>
             Elise
           </Text>{' '}
-          is an e-commerce website built with NextJS and ChakraUI. It is currently under
-          construction, but you can visit it{' '}
-          <Link href='https://onurs-ecommerce-site.netlify.app/' color={'orange'}>
+          is an e-commerce website built with NextJS and ChakraUI. It is currently under construction, but you can visit it{' '}
+          <Link href="https://onurs-ecommerce-site.netlify.app/" color={'orange'}>
             here
           </Link>
           . <br />
-          <br /> Elise will be a modern and user-friendly platform for buying and selling products
-          online. It will feature a clean and intuitive interface, fast and secure payment
-          processing, and a wide range of products to choose from. <br />
+          <br /> Elise will be a modern and user-friendly platform for buying and selling products online. It will feature a clean
+          and intuitive interface, fast and secure payment processing, and a wide range of products to choose from. <br />
           <br />
           Stay tuned for more updates as I continue to develop and improve Elise.
         </StyledText>
       )
+      url = 'https://onurs-ecommerce-site.netlify.app/'
       break
     case 'english-learning-assistant':
       name = 'English Learning Assistant'
@@ -66,35 +65,36 @@ export function getProjectDetail(projectName: string): getProjectDetailReturnTyp
       description = (
         <StyledText>
           I developed{' '}
-          <Text as='b' display={'inline'}>
+          <Text as="b" display={'inline'}>
             English Learning Assistant
           </Text>{' '}
           as a tool to help my fiancée improve her English skills. <br />
-          <br /> The website generates random English words, along with their definitions, synonyms,
-          and pronunciations, to provide a comprehensive learning experience. I built English
-          Learning Assistant using a variety of APIs to access the necessary data, which allowed me
-          to gain experience working with different APIs and integrate them into a single project.
+          <br /> The website generates random English words, along with their definitions, synonyms, and pronunciations, to
+          provide a comprehensive learning experience. I built English Learning Assistant using a variety of APIs to access the
+          necessary data, which allowed me to gain experience working with different APIs and integrate them into a single
+          project.
           <br />
           <br />
-          English Learning Assistant has proven to be an effective learning tool, and I am proud of
-          the positive impact it has had on my fiancée&lsquo;s English skills.
+          English Learning Assistant has proven to be an effective learning tool, and I am proud of the positive impact it has had
+          on my fiancée&lsquo;s English skills.
         </StyledText>
       )
+      url = 'https://onurcagan.github.io/'
       break
     case 'recalculator':
       name = 'ReCalculator'
       image = '/images/recalculator.png'
       description = (
         <StyledText>
-          <Text as='b' display={'inline'}>
+          <Text as="b" display={'inline'}>
             ReCalculator
           </Text>{' '}
           is a modern calculator app built with WPF and C#. <br />
-          <br /> It is designed to be fast and easy to use, with a modern and intuitive interface.
-          Recalculator can perform all the basic arithmetic operations. <br />
+          <br /> It is designed to be fast and easy to use, with a modern and intuitive interface. Recalculator can perform all
+          the basic arithmetic operations. <br />
           <br />
-          Whether you&lsquo;re a student, a professional, or just someone who needs a calculator on
-          a daily basis, Recalculator is the perfect tool for you.
+          Whether you&lsquo;re a student, a professional, or just someone who needs a calculator on a daily basis, Recalculator is
+          the perfect tool for you.
           <br />
           <br /> Try it out today!
         </StyledText>
@@ -105,20 +105,42 @@ export function getProjectDetail(projectName: string): getProjectDetailReturnTyp
       image = '/images/ahk.webp'
       description = (
         <StyledText>
-          <Text as='b' display={'inline'}>
+          <Text as="b" display={'inline'}>
             Ticket Notifier
           </Text>{' '}
           is an AutoHotkey script that I created to improve my company&lsquo;s workflow.
           <br />
-          <br /> It automatically sends notifications to the relevant departments and people when
-          important developments occur. This helps to ensure that everyone is kept up to date and
-          can take the necessary action in a timely manner.
+          <br /> It automatically sends notifications to the relevant departments and people when important developments occur.
+          This helps to ensure that everyone is kept up to date and can take the necessary action in a timely manner.
           <br />
-          <br /> Ticket Notifier has significantly improved our team&lsquo;s efficiency and
-          productivity, and I&lsquo;m proud to have contributed to its development.
+          <br /> Ticket Notifier has significantly improved our team&lsquo;s efficiency and productivity, and I&lsquo;m proud to
+          have contributed to its development.
         </StyledText>
       )
       break
+    case 'photographer-site':
+      name = 'Photographer Site'
+      image =
+        'https://images.unsplash.com/photo-1606322296555-9b058f9c9fda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=847&q=80'
+      description = (
+        <StyledText>
+          <Text as="b" display={'inline'}>
+            Photographer site
+          </Text>{' '}
+          is a web application project built with Next.js. The user interface is built with React and styled using Tailwind CSS, a
+          utility-first CSS framework.
+          <br />
+          <br /> The site is designed to showcase the work of a professional photographer, with features such as galleries to
+          display photographs, a call to action asking for browsers to follow the professional on Instagram, and a contact form
+          for interested clients to get in touch.
+          <br />
+          <br />
+          The site is optimized for performance and accessibility, making it easy for users to browse and view the
+          photographer&apos;s work on a wide range of devices.
+        </StyledText>
+      )
+
+      url = 'https://photographersite.vercel.app/'
   }
-  return { name, image, description }
+  return { name, image, description, url }
 }
