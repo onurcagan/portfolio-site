@@ -40,6 +40,13 @@ export const ContactMe = () => {
                 color: 'white',
               }}
               userSelect="none"
+              onClick={() => {
+                window.open(
+                  "mailto:onurcagann@gmail.com?subject=We'd Like To Work With You!&body=Hey Onur. This is who we are, If you'd like to work with us we'd love to work with you!",
+                )
+                alert("Why don't you e-mail me as well?")
+                return
+              }}
             >
               Submit
             </ChakraButton>
