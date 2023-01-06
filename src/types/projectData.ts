@@ -4,6 +4,7 @@ export interface getProjectDetailReturnTypes {
   name: string | undefined
   image: string | undefined
   description: ReactElement | undefined
+  url?: string | undefined
 }
 export interface Project {
   projectShortDetail: string
