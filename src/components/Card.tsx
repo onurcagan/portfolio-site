@@ -2,7 +2,19 @@ import { Center, Image, Stack, Text, chakra, shouldForwardProp } from '@chakra-u
 import { isValidMotionProp, motion } from 'framer-motion'
 import Link from 'next/link'
 
-export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: any) => {
+export const Card = ({
+  subText,
+  projectName,
+  projectShortDetail,
+  projectUrl,
+  photo,
+}: {
+  subText: string
+  projectName: string
+  projectShortDetail: string
+  projectUrl: string
+  photo: { image: string }
+}) => {
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
   })
@@ -56,14 +68,7 @@ export const Card = ({ subText, projectName, projectShortDetail, projectUrl }: a
               },
             }}
           >
-            <Image
-              alt="Project Image"
-              rounded={'lg'}
-              height={230}
-              width={'95%'}
-              objectFit={'cover'}
-              src={'/images/placeHolder.jpeg'}
-            />
+            <Image alt="Project Image" rounded={'lg'} height={230} width={'95%'} objectFit={'cover'} src={`${photo.image}`} />
           </ChakraBox>
           <Stack pt={'2.5rem'} align={'center'}>
             <Text color={'gray.500'} fontSize={'sm'} textAlign="center">
