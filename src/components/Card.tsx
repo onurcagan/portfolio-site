@@ -58,7 +58,7 @@ export const Card = ({
               pos: 'absolute',
               top: 7,
               left: 0,
-              backgroundImage: `url(${'/images/placeHolder.jpeg'})`,
+              backgroundImage: `url(${photo.image})`,
               filter: 'blur(15px)',
               zIndex: -1,
             }}
